@@ -12,3 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 059cf75c58bbc3445800adfb90c0078d, type: 3}
   m_Name: Question 1
   m_EditorClassIdentifier: 
+  question: "\uC0C8\uB85C\uC6B4 \uC9C8\uBB38\uC744 \uC785\uB825\uD558\uC138\uC694
+    1"
+  answers:
+  - "\uC9C8\uBB381-1"
+  - "\uC9C8\uBB381-2"
+  - "\uC9C8\uBB381-3"
+  - "\uC9C8\uBB381-4"
+  correctAnswerIndex: 0
