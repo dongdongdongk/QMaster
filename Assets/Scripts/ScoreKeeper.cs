@@ -15,6 +15,7 @@ public class ScoreKeeper : MonoBehaviour
     public void IncrementCorrectAnswers()
     {
         correctAnswers++;
+        Debug.Log("정답 수 증가: " + correctAnswers);
     }
 
     public int GetQuestionsSeen()
@@ -24,10 +25,15 @@ public class ScoreKeeper : MonoBehaviour
     public void IncrementQuestionsSeen()
     {
         questionsSeen++;
+        Debug.Log("문제 수 증가: " + questionsSeen);
     }
 
     public float CalculateScore()
     {
-        return Mathf.RoundToInt(correctAnswers / (float)questionsSeen * 100);
+        if (questionsSeen == 0)
+        {
+            return 0; // 혹은 적절한 기본값
+        }
+        return Mathf.Round(correctAnswers / (float)questionsSeen * 100f);
     }
 }

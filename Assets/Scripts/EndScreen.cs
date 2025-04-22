@@ -8,7 +8,7 @@ public class EndScreen : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI finalScoreText;
     ScoreKeeper scoreKeeper;
-    void Start()
+    void Awake()
     {
         scoreKeeper = FindObjectOfType<ScoreKeeper>();
     }
@@ -16,5 +16,6 @@ public class EndScreen : MonoBehaviour
     public void ShowFinalScore()
     {
         finalScoreText.text = "축하 합니다. 최종 점수: " + scoreKeeper.CalculateScore() + "%";
+        Debug.Log("최종 점수: " + scoreKeeper.CalculateScore() + "%");
     }
 }
